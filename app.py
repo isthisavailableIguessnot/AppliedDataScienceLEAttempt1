@@ -39,7 +39,7 @@ MODEL_RESULTS = pd.DataFrame(
     ],
     columns=["Model", "Macro F1", "Size (MB)", "CPU ms / image"],
 )
-TEAM = "[Corresponding author] and Samuel C. Usares"   # edit before deploying
+TEAM = "Raul II A. Patenio and Samuel C. Usares"   # edit before deploying
 SIZE_TARGET_MB = 25
 LATENCY_TARGET_MS = 1000
 
