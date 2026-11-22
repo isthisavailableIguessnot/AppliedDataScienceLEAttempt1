@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "price_source": "Fertilizer and Pesticide Authority (FPA), DA Philippines - Current Prices of 6 Major Grades Fertilizer per Province per Region (weekly fertilizer prices)",
+    "price_report_week": "Week 44",
+    "price_period": "October 26-30, 2026",
+    "price_url": "https://fpa.da.gov.ph/wp-content/uploads/2026/11/WFP-WK44-2026.sgd_.pdf",
+    "price_index_page": "https://fpa.da.gov.ph/weekly-prices/",
+    "price_unit": "PHP per 50 kg bag, average retail price",
+    "retrieved": "2026-11-22",
+    "default_location": "Region XI (Davao Region)",
+    "note": "Week 44 is the latest FPA report with machine-readable text at retrieval time. Weeks 45-46 (Nov 2-13, 2026) are posted as scanned images; update these numbers from the FPA weekly-prices page before the demo if needed. A dash in the FPA table (no data) is stored as null."
+  },
+
+  "products": {
+    "urea_prilled":   {"name": "Urea (prilled)",          "grade": "46-0-0",   "n": 46, "p2o5": 0,  "k2o": 0},
+    "urea_granular":  {"name": "Urea (granular)",         "grade": "46-0-0",   "n": 46, "p2o5": 0,  "k2o": 0},
+    "ammosul":        {"name": "Ammonium sulfate (Ammosul)", "grade": "21-0-0", "n": 21, "p2o5": 0,  "k2o": 0},
+    "complete":       {"name": "Complete",                "grade": "14-14-14", "n": 14, "p2o5": 14, "k2o": 14},
+    "ammophos":       {"name": "Ammonium phosphate (Ammophos)", "grade": "16-20-0", "n": 16, "p2o5": 20, "k2o": 0},
+    "mop":            {"name": "Muriate of potash (MOP)", "grade": "0-0-60",   "n": 0,  "p2o5": 0,  "k2o": 60},
+    "dap":            {"name": "Diammonium phosphate (DAP)", "grade": "18-46-0", "n": 18, "p2o5": 46, "k2o": 0}
+  },
+
+  "prices": {
+    "Region XI (Davao Region)": {
+      "urea_prilled": 2239.25, "urea_granular": 2157.46, "ammosul": 1247.60, "complete": 1832.90,
+      "ammophos": 1656.81, "mop": 1597.95, "dap": 3508.40
+    },
+    "Davao City": {
+      "urea_prilled": 2351.61, "urea_granular": null, "ammosul": 1270.27, "complete": 1947.76,
+      "ammophos": 1758.06, "mop": 1634.62, "dap": 3578.39
+    },
+    "National weighted average": {
+      "urea_prilled": 2273.25, "urea_granular": 2224.57, "ammosul": 1318.44, "complete": 1977.86,
+      "ammophos": 1827.84, "mop": 1669.93, "dap": 3346.03
+    }
+  },
+
+  "classes": {
+    "Nitrogen(N)": {
+      "label": "Nitrogen deficiency",
+      "nutrient_key": "n",
+      "nutrient_label": "N",
+      "symptoms": "Older (lower) leaves turn pale yellow-green, starting at the tip; the whole plant looks light green, short, with few tillers.",
+      "next_steps": [
+        "Check several plants across the field, not just one leaf. N deficiency usually shows on the older leaves first and across the whole field.",
+        "Compare leaf colour with a Leaf Color Chart (LCC) or PhilRice's Leaf Color Computing app to confirm and estimate how much N is needed.",
+        "Ask your Municipal Agriculture Office (MAO) or use the MOET kit / Rice Crop Manager for the right amount and timing for your field.",
+        "N is usually top-dressed in splits (for example at early tillering and at panicle initiation) rather than all at once."
+      ],
+      "fertilizers": ["urea_granular", "urea_prilled", "ammosul", "ammophos", "complete"],
+      "fertilizer_notes": "Urea (46-0-0) is the most concentrated N source. Ammosul (21-0-0) also supplies sulfur. Complete and Ammophos are usually used as basal fertilizer and also add P (and K for Complete).",
+      "wrong_prediction": "If the leaf is not really N-deficient, extra urea can cause lush, weak growth, lodging, and more pest and disease problems, and excess N can wash into water. It also wastes money that should go to the nutrient that is actually missing."
+    },
+    "Phosphorus(P)": {
+      "label": "Phosphorus deficiency",
+      "nutrient_key": "p2o5",
+      "nutrient_label": "P₂O₅",
+      "symptoms": "Plants are stunted and dark green with narrow, short, upright leaves and few tillers; leaves may have a reddish or purplish tint.",
+      "next_steps": [
+        "Look at the whole plant: P deficiency shows as stunted, dark green, upright plants with few tillers more than as spots on one leaf.",
+        "Confirm with a soil test (DA Regional Soils Laboratory) or the PhilRice MOET kit before buying fertilizer.",
+        "P works best when applied early (basal or at early tillering); late P has little effect on this season's yield.",
+        "Ask your MAO for the right rate for your soil and target yield."
+      ],
+      "fertilizers": ["dap", "ammophos", "complete"],
+      "fertilizer_notes": "DAP (18-46-0) is the most concentrated P source. Ammophos (16-20-0) and Complete (14-14-14) supply P together with N (and K for Complete).",
+      "wrong_prediction": "The model's most common error is between P and K. If the leaf is really K-deficient, P fertilizer will not fix it: the K problem continues, yield is lost, and the money for DAP or Ammophos is wasted."
+    },
+    "Potassium(K)": {
+      "label": "Potassium deficiency",
+      "nutrient_key": "k2o",
+      "nutrient_label": "K₂O",
+      "symptoms": "Older leaves have yellowish-brown or orange margins and tips, with rusty brown spots that spread; plants may be dark green and stunted.",
+      "next_steps": [
+        "Check older leaves on several plants for brown or orange leaf edges and tips. K symptoms are often clearer after panicle initiation.",
+        "Because K and P can look alike in photos, confirm with a soil test or the MOET kit before buying fertilizer.",
+        "K is often split: part at planting (basal) and part at early panicle initiation. Returning rice straw to the field also adds K.",
+        "Ask your MAO for the right rate for your soil and target yield."
+      ],
+      "fertilizers": ["mop", "complete"],
+      "fertilizer_notes": "Muriate of potash (0-0-60) is the most concentrated K source. Complete (14-14-14) supplies K together with N and P.",
+      "wrong_prediction": "About 1 in 10 'K' results on the test set were really P deficiency. If that happens, potash will not fix the problem: the P deficiency continues, tillering and yield suffer, and the money for MOP is wasted."
+    }
+  },
+
+  "references": [
+    {"title": "FPA Weekly Prices 2026 (index of weekly fertilizer price reports)", "url": "https://fpa.da.gov.ph/weekly-prices/"},
+    {"title": "FPA Week 44 (Oct 26-30, 2026) current prices of 6 major grades fertilizer per province per region", "url": "https://fpa.da.gov.ph/wp-content/uploads/2026/11/WFP-WK44-2026.sgd_.pdf"},
+    {"title": "ATI (DA) - Major fertilizers and their roles in rice production", "url": "https://ati2.da.gov.ph/ati-car/content/sites/default/files/2022-12/major_fertilizers-their_roles_in_rice_production.pdf"},
+    {"title": "IRRI Rice Knowledge Bank fact sheet - Potassium deficiency", "url": "https://rkbassam.aau.ac.in/uploads/factsheets/pdf/665052d2b4a27.pdf"},
+    {"title": "PIA / PhilRice - PhilRice urges farmers to ensure sufficient nutrients in rice crops (MOET, LCC, Rice Crop Manager)", "url": "https://pia.gov.ph/news/2024/01/17/philrice-urges-farmers-to-ensure-sufficient-nutrients-in-rice-crops"},
+    {"title": "Rice Today (IRRI) - PhilRice diagnostic apps and field kits (Leaf Color Computing, MOET)", "url": "https://ricetoday.irri.org/?p=27844"}
+  ]
+}
