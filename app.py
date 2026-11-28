@@ -436,13 +436,14 @@ with tab_model:
 with tab_about:
     st.subheader("The problem")
     st.markdown(
-        "Nitrogen, phosphorus and potassium deficiencies reduce rice yield, but they are hard to "
-        "tell apart by eye, and lab soil tests take time and money. Farmers often guess, which "
-        "wastes fertilizer and money and can leave the real deficiency untreated."
+        "Nitrogen, phosphorus, and potassium deficiencies reduce rice yield, and they are often difficult "
+        "to tell apart by eye since the symptoms look similar. Lab soil tests take time and money, which "
+        "small-scale farmers may find hard to do. A wrong guess wastes fertilizer and money and can leave "
+        "the real deficiency untreated."
     )
     st.subheader("Who it is for")
     st.markdown(
-        "Rice farmers and agricultural extension workers (for example Municipal Agriculture Office "
+        "Small-scale rice farmers and agricultural extension workers (for example Municipal Agriculture Office "
         "technicians) in Davao Region who need a quick first check from a phone photo, before "
         "confirming with a soil test or field kit."
     )
